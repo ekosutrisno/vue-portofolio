@@ -1,17 +1,19 @@
 <template>
   <div class="h-screen flex">
     <SideBar/>
-    <div class="flex-1 flex flex-col justify-between bg-whatsapp-dark-300">Chat</div>
+    <MainChatContent/>
   </div>
 </template>
 
 <script>
+import MainChatContent from './components/whatsapp/MainChatContent.vue'
 import SideBar from './components/whatsapp/SideBar.vue'
 
 export default {
   name: 'App',
   components: {
-    SideBar
+    SideBar,
+    MainChatContent
   }
 }
 </script>
