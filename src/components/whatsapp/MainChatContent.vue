@@ -24,10 +24,14 @@
       </div>
 
       <!-- Chats Wrapper -->
-      <div class="flex-1 overflow-y-auto on-scrollbar bg-whatsapp-dark-300 px-20">
-         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga aliquam vitae commodi atque repudiandae inventore. Ad, incidunt! Quam vero vel delectus molestias! Nostrum quod eveniet quis dignissimos, perspiciatis consequatur laboriosam.
+      <div class="flex-1 flex flex-col space-y-3 overflow-y-auto on-scrollbar bg-whatsapp-dark-300 px-20 py-3">
+        <div class="flex w-full flex-col items-end">
+            <ChatOwner v-for="(chat,i) in 5" :key="i" :idx="i"/>
+        </div>
+        <div class="flex w-full flex-col">
+            <ChatOther v-for="(chat,i) in 5" :key="i" :idx="i"/>
+        </div>
       </div>
-
       <!-- Input Chat Bottom -->
       <div class="bg-whatsapp-dark-200 shadow-lg flex items-center justify-between border-r w-full h-14 text-gray-100 border-gray-700 py-2 px-4">
          <div class="inline-flex items-center space-x-3">
@@ -57,9 +61,13 @@
 </template>
 
 <script>
+import ChatOther from './ChatOther.vue'
+import ChatOwner from './ChatOwner.vue'
    export default {
+      components: { ChatOwner,ChatOther },
       
    }
+            
 </script>
 
 <style scoped>
