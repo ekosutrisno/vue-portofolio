@@ -5,11 +5,11 @@
    </div>
    <div class="flex-1 h-full leading-none flex justify-center flex-col pr-2 border-b border-gray-700 overflow-x-hidden">
       <div class="flex items-center justify-between">
-         <span class="font-semibold text-xl text-gray-50">Eko Sutrisno</span>
+         <span class="font-semibold text-lg text-gray-50">Tukang Ngrecokin</span>
          <span class="text-sm text-whatsapp-teal-green">12.33 PM</span>
       </div>
       <div class="flex items-center justify-between">
-         <p class="text-sm text-gray-300"><span class="font-semibold">Puspita Sari: </span> ada apa?</p>
+         <p class="text-sm text-gray-300"><span class="font-semibold"><span class="hidden">Tukang Ngrecokin: </span></span> ada apa?</p>
          <div class="inline-flex space-x-2 transition-transform duration-100 ease-linear transform translate-x-7 group-hover:translate-x-0">
             <div class="py-1 px-1.5 bg-whatsapp-teal-green leading-none text-gray-900 rounded-full text-xs">
                <span class="p-0.5">12</span>

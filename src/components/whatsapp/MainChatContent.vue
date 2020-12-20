@@ -25,11 +25,8 @@
 
       <!-- Chats Wrapper -->
       <div class="flex-1 flex flex-col space-y-3 overflow-y-auto on-scrollbar bg-whatsapp-dark-300 px-20 py-3">
-        <div class="flex w-full flex-col items-end">
-            <ChatOwner v-for="(chat,i) in 5" :key="i" :idx="i"/>
-        </div>
-        <div class="flex w-full flex-col">
-            <ChatOther v-for="(chat,i) in 5" :key="i" :idx="i"/>
+        <div v-for="(chat,i) in chats" :key="i" :class="{'items-end' : chat.chatWrapper.isOwner}" class="flex w-full flex-col">
+            <ChatOther v-for="(cData,i) in chat.chatWrapper.chatData" :key="i" :idx="i" :chat="cData"/>
         </div>
       </div>
       <!-- Input Chat Bottom -->
@@ -62,10 +59,18 @@
 
 <script>
 import ChatOther from './ChatOther.vue'
-import ChatOwner from './ChatOwner.vue'
+import {chats} from '../../assets/resources/chats'
+import { reactive, toRefs } from 'vue'
    export default {
-      components: { ChatOwner,ChatOther },
-      
+      components: {ChatOther },
+      setup(){
+         const state = reactive({
+            chats
+         })
+         return{
+            ...toRefs(state)
+         }
+      }
    }
             
 </script>
