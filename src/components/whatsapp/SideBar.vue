@@ -49,20 +49,121 @@
       </div>
    </div>
    <div class="flex-1 flex flex-col overflow-y-auto on-scrollbar border-r border-gray-700">
-      <ChatSideBar v-for="(chat,i) in 5" :key="i" />
+      <ChatSideBar v-for="inbox in inboxChats" :key="inbox.inboxId" :inboxChat="inbox" />
    </div>
 
 </div>
 </template>
 
 <script>
-import { ref } from 'vue'
+import { reactive, ref, toRefs } from 'vue'
 import ChatSideBar from './ChatSideBar.vue'
    export default {
   components: { ChatSideBar },
       setup(){
          const shwoChatOptions = ref(false)
+         const state = reactive({
+            inboxChats:[
+               {
+                  inboxId: '8b2f0a31-db02-4463-8c7c-8d1e6a8d69ed',
+                  author: 'Eko Sutrisno',
+                  time: '12:21 PM',
+                  message: 'Kuy, kapan makan2 nih?',
+                  entry: 1,
+                  imageAvatar:'https://cdn3.iconfinder.com/data/icons/business-avatar-1/512/9_avatar-128.png'
+               },
+               {
+                  inboxId: 'f5bdcd3e-bfa8-475d-80d4-697f8bad6462',
+                  author: 'Tukang Ngerecokin',
+                  time: '10:00 PM',
+                  message: 'Eko apa kabar?',
+                  entry: 0,
+                  imageAvatar:'https://cdn4.iconfinder.com/data/icons/avatars-xmas-giveaway/128/female_woman_avatar_portrait-128.png'
+               },
+               {
+                  inboxId: '1d3d9920-a0e6-4bf2-a432-840af630bc2a',
+                  author: 'Anak Kecoak',
+                  time: '05:00 AM',
+                  message: 'Woy woy woy woy woy Aku laper nih',
+                  entry: 12,
+                  imageAvatar:'https://cdn4.iconfinder.com/data/icons/avatars-xmas-giveaway/128/zombie_avatar_monster_dead-128.png'
+               },
+               {
+                  inboxId: 'a6f5d032-4c1e-4d67-a0f3-74f79dabc981',
+                  author: 'Hanifah',
+                  time: '10:00 PM',
+                  message: 'Eko apa kabar?',
+                  entry: 0,
+                  imageAvatar:'https://cdn4.iconfinder.com/data/icons/avatars-xmas-giveaway/128/boy_person_avatar_kid-128.png'
+               },
+               {
+                  inboxId: '8df61a4d-11a5-4db4-b081-cc27bdb265e7',
+                  author: 'Aisyah Ayu Asyifa',
+                  time: '10:00 PM',
+                  message: 'Eko apa kabar?',
+                  entry: 1,
+                  imageAvatar:'https://cdn4.iconfinder.com/data/icons/avatars-xmas-giveaway/128/grandma_elderly_nanny_avatar-128.png'
+               },
+               {
+                  inboxId: '819163a6-2d45-442a-9a6c-066797a3420f',
+                  author: 'Ibukku Sayang',
+                  time: '10:00 PM',
+                  message: 'Eko apa kabar?',
+                  entry: 0,
+                  imageAvatar:'https://cdn4.iconfinder.com/data/icons/avatars-xmas-giveaway/128/pilot_traveller_person_avatar-128.png'
+               },
+               {
+                  inboxId: '6273ffde-c877-4515-b25f-b74c2507e83b',
+                  author: 'Mbah Q Keren',
+                  time: '10:00 PM',
+                  message: 'Eko apa kabar?',
+                  entry: 1,
+                  imageAvatar:'https://cdn4.iconfinder.com/data/icons/avatars-xmas-giveaway/128/marilyn_monroe_artist_avatar-128.png'
+               },
+               {
+                  inboxId: '8335712b-87b0-4ad7-921d-54a113bc57de',
+                  author: 'Paman Q',
+                  time: '10:00 PM',
+                  message: 'Eko apa kabar?',
+                  entry: 0,
+                  imageAvatar:'https://cdn4.iconfinder.com/data/icons/avatars-xmas-giveaway/128/avocado_scream_avatar_food-128.png'
+               },
+               {
+                  inboxId: 'e0d2477d-5d53-4a4f-bd00-5e17037257f0',
+                  author: 'Bibik Q',
+                  time: '10:00 PM',
+                  message: 'Eko apa kabar?',
+                  entry: 2,
+                  imageAvatar:'https://cdn4.iconfinder.com/data/icons/avatars-xmas-giveaway/128/cloud_crying_rain_avatar-128.png'
+               },
+               {
+                  inboxId: '027dfa72-946c-44bd-b316-2d64bce00f3f',
+                  author: 'Anak Gak Kenal',
+                  time: '10:00 PM',
+                  message: 'Eko apa kabar?',
+                  entry: 0,
+                  imageAvatar:'https://cdn4.iconfinder.com/data/icons/avatars-xmas-giveaway/128/ufo_alien_space_avatar-128.png'
+               },
+               {
+                  inboxId: '',
+                  author: 'Paijo',
+                  time: '10:00 PM',
+                  message: 'Eko apa kabar?',
+                  entry: 0,
+                  imageAvatar:'https://cdn4.iconfinder.com/data/icons/avatars-xmas-giveaway/128/breaking_bad_chemisrty_avatar_heisenberg-128.png'
+               },
+               {
+                  inboxId: '',
+                  author: 'Bambang Susilo',
+                  time: '10:00 PM',
+                  message: 'Eko apa kabar?',
+                  entry: 0,
+                  imageAvatar:'https://cdn4.iconfinder.com/data/icons/avatars-xmas-giveaway/128/punk_man_person_avatar-128.png'
+               },
+            ]
+         })
          return {
+            ...toRefs(state),
             shwoChatOptions
          }
       }

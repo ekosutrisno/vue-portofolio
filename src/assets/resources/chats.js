@@ -6,28 +6,19 @@ export const chats = [
       isOwner: true,
          chatData:[
             {
-            chatAuthor: 'Eko Sutrinso',
-            chatMessages:'Kamu ginama kabarnya?',
-            chatTime : '09:12 PM',
-            isOwner: true,
-            isRead: true
-         }
-      ]
-      }
-   },
-   {
-      chatDayTime:'yesterday',
-      chatWrapper:{
-      chatWrapperId:'0b4a7b22-e75d-4833-afa8-ba5d28b8edf5',
-      isOwner: true,
-         chatData:[
+               chatAuthor: 'Eko Sutrinso',
+               chatMessages:'Kamu ginama kabarnya? udah lama gek sekabaran',
+               chatTime : '09:12 PM',
+               isOwner: true,
+               isRead: true
+            },
             {
-            chatAuthor: 'Eko Sutrinso',
-            chatMessages:'Kamu ginama kabarnya?',
-            chatTime : '09:12 PM',
-            isOwner: true,
-            isRead: true
-         }
+               chatAuthor: 'Eko Sutrinso',
+               chatMessages:'Kayakanya kamu jarang banget bikin Whatsapp Story',
+               chatTime : '09:12 PM',
+               isOwner: true,
+               isRead: true
+            }
       ]
       }
    },
@@ -35,31 +26,29 @@ export const chats = [
       chatDayTime:'yesterday',
       chatWrapper:{
       chatWrapperId:'c60a9523-8a36-411a-a3f8-c130e52b230d',
-      isOwner: true,
-         chatData:[
-            {
-            chatAuthor: 'Eko Sutrinso',
-            chatMessages:'Kamu ginama kabarnya?',
-            chatTime : '09:12 PM',
-            isOwner: true,
-            isRead: true
-         }
-      ]
-      }
-   },
-   {
-      chatDayTime:'yesterday',
-      chatWrapper:{
-      chatWrapperId:'f3ccdc10-f6c4-408e-b8e7-e93638ba5f47',
       isOwner: false,
          chatData:[
             {
-            chatAuthor: 'Eko Sutrinso',
-            chatMessages:'Kamu ginama kabarnya?',
-            chatTime : '09:12 PM',
-            isOwner: false,
-            isRead: true
-         }
+               chatAuthor: 'Eko Sutrinso',
+               chatMessages:'Iya, aku lagi lumayan sibuk sekarang.. hehee',
+               chatTime : '09:12 PM',
+               isOwner: false,
+               isRead: true
+            },
+            {
+               chatAuthor: 'Eko Sutrinso',
+               chatMessages:'O Ya kamu gimana kabarnya?',
+               chatTime : '09:12 PM',
+               isOwner: false,
+               isRead: true
+            },
+            {
+               chatAuthor: 'Eko Sutrinso',
+               chatMessages:'Kamu juga kayaknya sibuk sama kerjaan.. hahaha 😂😂😂',
+               chatTime : '09:12 PM',
+               isOwner: false,
+               isRead: true
+            }
       ]
       }
    },
@@ -70,28 +59,26 @@ export const chats = [
       isOwner: true,
          chatData:[
             {
-            chatAuthor: 'Eko Sutrinso',
-            chatMessages:'Kamu ginama kabarnya?',
-            chatTime : '09:12 PM',
-            isOwner: true,
-            isRead: true
-         }
-      ]
-      }
-   },
-   {
-      chatDayTime:'yesterday',
-      chatWrapper:{
-      chatWrapperId:'e65f279e-ae8c-4a9a-8777-b33c726b3411',
-      isOwner: true,
-         chatData:[
+               chatAuthor: 'Eko Sutrinso',
+               chatMessages:'Alhamdulillah baik',
+               chatTime : '09:12 PM',
+               isOwner: true,
+               isRead: true
+            },
             {
-            chatAuthor: 'Eko Sutrinso',
-            chatMessages:'Kamu ginama kabarnya?',
-            chatTime : '09:12 PM',
-            isOwner: true,
-            isRead: true
-         }
+               chatAuthor: 'Eko Sutrinso',
+               chatMessages:'Iya ini lagi ada sprint project',
+               chatTime : '09:12 PM',
+               isOwner: true,
+               isRead: true
+            },
+            {
+               chatAuthor: 'Eko Sutrinso',
+               chatMessages:'kapan kapan jalan yuk?',
+               chatTime : '09:12 PM',
+               isOwner: true,
+               isRead: true
+            }
       ]
       }
    },
@@ -102,12 +89,12 @@ export const chats = [
       isOwner: false,
          chatData:[
             {
-            chatAuthor: 'Eko Sutrinso',
-            chatMessages:'Kamu ginama kabarnya?',
-            chatTime : '09:12 PM',
-            isOwner: false,
-            isRead: true
-         }
+               chatAuthor: 'Eko Sutrinso',
+               chatMessages:'Jalan Kemana nih.. hayooo🤣🤣🤣🤣🤣🤣🤣🤣🤣',
+               chatTime : '09:12 PM',
+               isOwner: false,
+               isRead: true
+            }
       ]
       }
    },
@@ -119,7 +106,7 @@ export const chats = [
          chatData:[
             {
             chatAuthor: 'Eko Sutrinso',
-            chatMessages:'Kamu ginama kabarnya?',
+            chatMessages:'Kita makan-makan aja seperti biasa',
             chatTime : '09:12 PM',
             isOwner: true,
             isRead: true
@@ -134,12 +121,56 @@ export const chats = [
       isOwner: false,
          chatData:[
             {
-            chatAuthor: 'Eko Sutrinso',
-            chatMessages:'Kamu ginama kabarnya?',
-            chatTime : '09:12 PM',
-            isOwner: false,
-            isRead: true
-         }
+               chatAuthor: 'Eko Sutrinso',
+               chatMessages:'Ketempat biasa aja gimana? bukan masalah tempatnya yang kita ambil tapi kumpul barengnya pokoknya✨✨',
+               chatTime : '09:12 PM',
+               isOwner: false,
+               isRead: true
+            },
+            {
+               chatAuthor: 'Eko Sutrinso',
+               chatMessages:'Karena beneran udah lama banget kita ini gak ketemu',
+               chatTime : '09:12 PM',
+               isOwner: false,
+               isRead: true
+            },
+            {
+               chatAuthor: 'Eko Sutrinso',
+               chatMessages:'Jujur aku sebenernya Rindu juga si... hahahahahahahha',
+               chatTime : '09:12 PM',
+               isOwner: false,
+               isRead: true
+            },
+      ]
+      }
+   },
+   {
+      chatDayTime:'yesterday',
+      chatWrapper:{
+      chatWrapperId:'4fcc51d4-bd81-43cc-af03-0518f1a20f93',
+      isOwner: true,
+         chatData:[
+            {
+               chatAuthor: 'Eko Sutrinso',
+               chatMessages:'Ok, Segera suruh nenek gayung atur rencana',
+               chatTime : '09:12 PM',
+               isOwner: true,
+               isRead: true
+            },
+            {
+               chatAuthor: 'Eko Sutrinso',
+               chatMessages:'Gak pakek lama pokoknya',
+               chatTime : '09:12 PM',
+               isOwner: true,
+               isRead: true
+            },
+            {
+               chatAuthor: 'Eko Sutrinso',
+               chatMessages:'aku langsung kabarin yang lain dulu',
+               chatTime : '09:12 PM',
+               isOwner: true,
+               isRead: true
+            }
       ]
       }
    },

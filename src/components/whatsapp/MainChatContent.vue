@@ -1,12 +1,12 @@
 <template>
    <div class="flex-1 flex flex-col justify-between bg-whatsapp-dark-300">
       <!-- Header -->
-      <div class="bg-whatsapp-dark-200 shadow-lg flex items-center justify-between border-r w-full h-14 text-gray-100 border-gray-700 py-2 px-4">
+      <div class="bg-whatsapp-dark-200 shadow-2xl flex items-center justify-between border-r w-full h-14 text-gray-100 border-gray-700 py-2 px-4">
          <div class="inline-flex">
             <img class="w-10 h-10 object-cover" src="https://avatars0.githubusercontent.com/u/51039205?s=460&u=cb1d242b6a9b13a3b6383e46b5410fafe471b63d&v=4" alt="profile-img">
             <div class="inline-block font-bold ml-3">
                <h1 class="text-gray-300">Eko Sutrisno</h1>
-               <p class="text-sm text-gray-400 font-normal">last seen yesterady at 6.19 PM</p>
+               <p class="text-sm text-gray-400 font-normal">last seen yesterday at 6.19 PM</p>
             </div>
          </div>
          <div class="inline-flex items-center space-x-3">
@@ -29,8 +29,9 @@
             <ChatOther v-for="(cData,i) in chat.chatWrapper.chatData" :key="i" :idx="i" :chat="cData"/>
         </div>
       </div>
+
       <!-- Input Chat Bottom -->
-      <div class="bg-whatsapp-dark-200 shadow-lg flex items-center justify-between border-r w-full h-14 text-gray-100 border-gray-700 py-2 px-4">
+      <div class="bg-whatsapp-dark-200 shadow-2xl flex items-center justify-between border-r w-full h-14 text-gray-100 border-gray-700 py-2 px-4">
          <div class="inline-flex items-center space-x-3">
             <button class="text-gray-500 focus:outline-none hover:bg-whatsapp-dark-300 hover:bg-opacity-30 rounded-full p-2">
               <svg class="w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -44,7 +45,7 @@
             </button>
          </div>
          <div class="relative w-full">
-               <input placeholder="type a message" type="text" class="py-2 px-4 text-gray-300 w-full focus:outline-none rounded-full bg-gray-700 bg-opacity-30">
+               <input v-model="chatMessage" @keyup.enter="writeChat" placeholder="type a message" type="text" class="py-2 px-4 text-gray-300 w-full focus:outline-none rounded-full bg-gray-700 bg-opacity-30">
          </div>
          <div class="inline-flex items-center space-x-3">
             <button class="text-gray-500 focus:outline-none hover:bg-whatsapp-dark-100 hover:bg-opacity-30 rounded-full p-2">
@@ -60,16 +61,35 @@
 <script>
 import ChatOther from './ChatOther.vue'
 import {chats} from '../../assets/resources/chats'
-import { reactive, toRefs } from 'vue'
+import { reactive, ref, toRefs } from 'vue'
    export default {
       components: {ChatOther },
       setup(){
          const state = reactive({
             chats
          })
-         return{
-            ...toRefs(state)
+         const chatMessage = ref('')
+
+         const writeChat = ()=>{
+
+            state.chats[chats.length-1].chatWrapper.chatData.push(
+               {
+                  chatAuthor: 'Eko Sutrinso',
+                  chatMessages: chatMessage.value,
+                  chatTime : '09:12 PM',
+                  isOwner: true,
+                  isRead: true
+               }
+            )
+            chatMessage.value = ''
          }
+
+         return{
+            ...toRefs(state),
+            chatMessage,
+            writeChat
+         }
+
       }
    }
             

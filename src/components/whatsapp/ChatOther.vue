@@ -22,13 +22,13 @@
       <div class="flex items-center justify-end bottom-0 -right-3 text-xs leading-none text-gray-400 absolute">
         <div class="inline-flex items-center -mr-3">
             <span>  {{chat.chatTime}} </span>
-            <span class="ml-0.5 text-whatsapp-blue">
-            <svg class="w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-            </svg>
-            <svg class="w-4 -mt-3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-            </svg>
+            <span v-if="chat.isOwner" class="ml-0.5 text-whatsapp-blue">
+               <svg class="w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+               </svg>
+               <svg class="w-4 -mt-3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+               </svg>
             </span>
         </div>
          <button class="focus:outline-none mr-3 text-transparent group-hover:text-gray-400 transition-transform duration-100 ease-linear transform group-hover:-translate-x-1">

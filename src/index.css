@@ -27,7 +27,7 @@ div *::-webkit-scrollbar-thumb {
   background-color: transparent !important;
 }
 .on-scrollbar::-webkit-scrollbar {
-  width: 8px !important;
+  width: 6px !important;
   background-color: transparent;
 }
 .on-scrollbar::-webkit-scrollbar-thumb {
